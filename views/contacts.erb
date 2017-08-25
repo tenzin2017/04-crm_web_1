@@ -1,13 +1,15 @@
-<html>
-<head>
-  <title> </title>
-</head>
-<body>
-  <a href = "/index"> index </a>
-<h1> <%= @title %> </h1>
-<ul> <% @contacts.each do |contact| %>
-   <li> <%= contact.first_name %>  <%= contact.last_name%> <%= contact.email %> <%= contact.note%></li>
-   <% end -%>
+<div class = "main">
+
+<ul class = "contacts">
+  <div class = "contact_size">
+  <h2> There are <%= @contacts.size %> contacts </h2>
+  </div>
+<% @contacts.each do |contact| %>
+   <div class = "each_contact">
+   <li > <%= contact.first_name %>  <%= contact.last_name%> <%= contact.email %></li>
+   <p><a href ="#"> Edit </a> | <a href = "#"> Delete </a> </p>
+   </div>
+   <% end %>
+
  </ul>
-</body>
-</html>
+ </div>
